@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="assets/Gabriel-Leblanc-Historic-Mac-Mac.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Diego Alcântara Portfolio</title>
 </head>
 <body>
+    <div id="overlay"></div>
     <nav>
         <button class="hamburguer"><i class="fas fa-bars"></i>
         </button>
@@ -69,65 +71,63 @@
         
     </header>
     <main>
+        <div id="saberMaisProjetos">
+            <img src="assets/clima.JPG" alt="" id="imagemDoProjetoSelecionado">
+            <div class="conteudo">
+                <h1 id="tituloDoProjetoSelecionado">Título do projeto</h1>
+                <h2 id="subtituloDoProjetoSelecionado">info adicional</h2>
+                <hr>
+                <div class="info">
+                    <p id="descricaoDoProjetoSelecionado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dignissimos omnis voluptates ut ipsum quis consectetur illo qui? Facere sequi magnam modi! Neque quaerat voluptas aut dignissimos excepturi commodi recusandae.</p>
+                    <div class="botoes">
+                        <div class="principais">
+                            <a href="#" target="_blank" id="liveServerDoProjetoSelecionado">Live Server</a>
+                            <a href="#" target="_blank" id="codigoDoProjetoSelecionado">ver código</a>
+                        </div>
+                        <button class="close" id="fecharAbaSaberMais"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <h1 class="titulo">Projetos</h1>
         <div class="barra"></div>
         <div id="portfolio">
 
             <section id="divProjetos" class="observado" data-section="Projetos">
                 <div class="projeto" id="projeto1">
-                    <img src="assets/tracker1.JPG" alt="">
                     <div class="projetoInfo">
                         <div class="info1">
                             <h2>Expense tracker</h2>
                             <p>Bootstrap / Javascript / Jquery</p>
                         </div>
                         <div class="info2">
-                            <a href="https://alcantara-diego.github.io/aplicativodegastos/" target="_blank">Testar projeto!</a>
-                            <a href="https://github.com/Alcantara-Diego/aplicativodegastos" target="_blank">Ver código</a>
+                            <a id="projeto1saberMais" data-projeto="expense">saber mais</a>
                         </div>
                     </div>
                 </div>
                 <div class="projeto" id="projeto2">
-                    <img src="assets/conversor1.png" alt="">
                     <div class="projetoInfo">
                         <div class="info1">
                             <h2>Conversor de moedas</h2>
-                            <p>Javascript</p>
+                            <p>API / Javascript</p>
                         </div>
                         <div class="info2">
-                            <a href="https://alcantara-diego.github.io/conversordemoedas/" target="_blank">Testar projeto!</a>
-                            <a href="https://github.com/Alcantara-Diego/conversordemoedas" target="_blank">Ver código</a>
+                            <a id="projeto2saberMais" data-projeto="conversor">saber mais</a>
                         </div>
                     </div>
                 </div>
                 <div class="projeto" id="projeto3">
-                    <img src="assets/color.png" alt="">
                     <div class="projetoInfo">
                         <div class="info1">
-                            <h2>Adivinhe a cor minigame</h2>
-                            <p>Javascript</p>
+                            <h2>previsão do tempo</h2>
+                            <p>API / Javascript</p>
                         </div>
                         <div class="info2">
-                            <a href="https://alcantara-diego.github.io/guessacolor/" target="_blank">Testar projeto!</a>
-                            <a href="https://github.com/Alcantara-Diego/guessacolor" target="_blank">Ver código</a>
+                            <a id="projeto3saberMais" data-projeto="clima">saber mais</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Projeto não finalizado -->
-                <!-- <div class="projeto" id="projeto4">
-                    <img src="assets/youtube-g4e954ef36_640.png" alt="">
-                    <div class="projetoInfo">
-                        <div class="info1">
-                            <h2>Adivinhe o número minigame</h2>
-                            <p>Javascript</p>
-                        </div>
-                        <div class="info2">
-                            <a href="https://alcantara-diego.github.io/guessanumber/" target="_blank">Testar projeto!</a>
-                            <a href="https://github.com/Alcantara-Diego/guessanumber" target="_blank">Ver código</a>
-                        </div>
-                    </div>
-                </div> -->
             </section>
             
         </div>
@@ -136,7 +136,7 @@
         <svg viewBox="0 0 1536 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#F5F5F5" d="M 0 50 L 779 110 L 779 0 L 0 0 Z" stroke-width="0"></path> <path fill="#F5F5F5" d="M 778 110 L 1536 50 L 1536 0 L 778 0 Z" stroke-width="0"></path> </svg>
         <h1 class="titulo" id="contatoTitulo">contato</h1>
         <div class="barra"></div>
-        <p class="observado" data-section="Contato">Alguma dúvida, sugestão ou oportunidade de trabalho? <br> Envie-me uma mensagem e responderei assim que possível!</p>
+        <p class="observado" data-section="Contato">Alguma dúvida ou oportunidade de trabalho? <br> Envie-me uma mensagem e responderei assim que possível!</p>
 
 
         <form action="https://gmail.us20.list-manage.com/subscribe/post?u=a6841b0f47fb26e0fcb791206&amp;id=6100882089" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

@@ -14,19 +14,104 @@ document.getElementsByClassName("hamburguer")[0].addEventListener("click", ()=>{
     navBarLinks.classList.toggle("active");
 })
 
-// funções para section projetos
+// mostrar cover ao dar hover nos projetos
 function ativarHoverNosProjetos(){
     $(".projeto").mouseover(function(){
-        $(this).children().eq(1).css({"opacity": "1"}); 
-        $(this).children().eq(1).children().eq(0).css({"opacity": "1","animation": "paraBaixo 0.7s ease"}) 
-        $(this).children().eq(1).children().eq(1).css({"opacity": "1","animation": "paraCima 0.7s ease"})  
+        $(this).children().first().css({"opacity": "1"}); 
+        $(this).children().first().children().eq(0).css({"opacity": "1","animation": "paraBaixo 0.7s ease"}) 
+        $(this).children().first().children().eq(1).css({"opacity": "1","animation": "paraCima 0.7s ease"})  
     })
     $(".projeto").mouseout(function(){
-        $(this).children().eq(1).css({"opacity": "0"});
-        $(this).children().eq(1).children().eq(0).css({"animation": "none"})
-        $(this).children().eq(1).children().eq(1).css({"animation": "none"})  
+        $(this).children().first().css({"opacity": "0"});
+        $(this).children().first().children().eq(0).css({"animation": "none"})
+        $(this).children().first().children().eq(1).css({"animation": "none"})  
     })
 }
+
+//informações dos projetos destaque no portfolio
+const infoDosProjetos = [
+    {
+        titulo: "Expense Tracker",
+        subtitulo: "Controle de finanças.",
+        descricao: "Aplicativo de controle de finanças. Registre seus gastos e ganhos, crie metas para alcançar seus objetivos, adicione a aba 'inscrições' despezas recorrentes para não se esquecer delas, e personalize o app com cores diferentes ou com o modo noturno.",
+        liveServerLink: "https://alcantara-diego.github.io/aplicativodegastos/",
+        codigoLink: "https://github.com/Alcantara-Diego/aplicativodegastos"
+    },
+    {
+        titulo: "Conversor de moedas",
+        subtitulo: "Real dólar e euro.",
+        descricao: "Saiba o valor do dólar e do euro hoje e converta a quantidade desejada para reais. informações extraídas por API.",
+        liveServerLink: "https://alcantara-diego.github.io/conversordemoedas/",
+        codigoLink: "https://github.com/Alcantara-Diego/conversordemoedas"
+    },
+    {
+        titulo: "Clima Tempo",
+        subtitulo: "Saiba a temperatura da sua cidade.",
+        descricao: "Informações extraídas da OpenWeather API, pesquise a temperatura e condições do clima em milhares de cidades disponíveis.",
+        liveServerLink: "https://alcantara-diego.github.io/climatempo/",
+        codigoLink: "https://github.com/Alcantara-Diego/climatempo"
+    }
+
+]
+//Altera as informações da aba saberMais dependendo do projeto selecionado pelo usuário
+function atualizarInformacoes(atributo){
+    let imagemDoProjetoSelecionado = document.getElementById("imagemDoProjetoSelecionado");
+    let tituloDoProjetoSelecionado = document.getElementById("tituloDoProjetoSelecionado");
+    let subtituloDoProjetoSelecionado = document.getElementById("subtituloDoProjetoSelecionado");
+    let descricaoDoProjetoSelecionado = document.getElementById("descricaoDoProjetoSelecionado");
+    let liveServerDoProjetoSelecionado = document.getElementById("liveServerDoProjetoSelecionado");
+    let codigoDoProjetoSelecionado = document.getElementById("codigoDoProjetoSelecionado");
+
+    switch(atributo){
+        case "expense": //Expense Tracker
+            imagemDoProjetoSelecionado.src="assets/tracker.JPG";
+            tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[0].titulo;
+            subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[0].subtitulo;
+            descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[0].descricao;
+            liveServerDoProjetoSelecionado.href=infoDosProjetos[0].liveServerLink;
+            codigoDoProjetoSelecionado.href=infoDosProjetos[0].codigoLink;
+            break;
+        case "conversor": //Conversor de moedas
+            imagemDoProjetoSelecionado.src="assets/conversor.JPG";
+            tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[1].titulo;
+            subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[1].subtitulo;
+            descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[1].descricao;
+            liveServerDoProjetoSelecionado.href=infoDosProjetos[1].liveServerLink;
+            codigoDoProjetoSelecionado.href=infoDosProjetos[1].codigoLink;
+            break;
+        case "clima": //Clima tempo
+            imagemDoProjetoSelecionado.src="assets/clima.JPG";
+            tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[2].titulo;
+            subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[2].subtitulo;
+            descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[2].descricao;
+            liveServerDoProjetoSelecionado.href=infoDosProjetos[2].liveServerLink;
+            codigoDoProjetoSelecionado.href=infoDosProjetos[2].codigoLink;
+            break;
+
+    }
+}
+function mostrarAbaSaberMais(){
+    const atributo = this.getAttribute("data-projeto");
+    //Adiciona as informações do projeto selecionado na aba
+    atualizarInformacoes(atributo);
+    //a classe revela a div na tela aumentando a escala
+    $("#saberMaisProjetos").addClass("fullScale");
+    //o overlay é uma barreira que impede a interação com qualquer outra parte do site a não ser a aba que mostra as informações do projeto selecionado
+    document.getElementById("overlay").style.display="block";
+}
+document.getElementById("projeto1saberMais").addEventListener("click", mostrarAbaSaberMais);
+document.getElementById("projeto2saberMais").addEventListener("click", mostrarAbaSaberMais);
+document.getElementById("projeto3saberMais").addEventListener("click", mostrarAbaSaberMais);
+
+// fechar a aba com as informações do projeto selecionado e remove o overlay
+document.getElementById("fecharAbaSaberMais").addEventListener("click", () =>{
+    $("#saberMaisProjetos").removeClass("fullScale");
+    document.getElementById("overlay").style.display="none";
+})
+
+
+
+// animar sessões
 function mostrarSectionProjetos(){
     $(".titulo").eq(0).css({"animation": "animarTitulo 2s"}).css("opacity", "1");
     $(".barra").eq(0).css({"animation": "animarBarra 2s"}).css("opacity", "1");
@@ -55,6 +140,8 @@ function mostrarSectionContato(){
         $("form").css({"animation": "revelar 2s"}).css("opacity", "1");
     },1000)
 }
+
+
 
 // Observadores para revelar ou alterar itens na tela
 const options = {
@@ -106,7 +193,7 @@ itensObservados.forEach(item =>{
     observandoSections.observe(item);
 })
 
-
+// animar nav-bar conforme scroll na tela
 const landing = document.getElementById("meuNome");
 const observandoNav = new IntersectionObserver(function(entries, observer){
     entries.forEach(entry =>{
