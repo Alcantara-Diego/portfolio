@@ -50,6 +50,13 @@ const infoDosProjetos = [
         descricao: "Informações extraídas da OpenWeather API, pesquise a temperatura e condições do clima em milhares de cidades disponíveis.",
         liveServerLink: "https://alcantara-diego.github.io/climatempo/",
         codigoLink: "https://github.com/Alcantara-Diego/climatempo"
+    },
+    {
+        titulo: "React Todo List",
+        subtitulo: "Organize sua agenda!",
+        descricao: "Não se esqueça das sua obrigações do dia. Crie tarefas, de destaque as mais importantes e aproveite o tema claro e noturno. Aplicativo feito com React.js",
+        liveServerLink: "https://alcantara-diego.github.io/todolist/",
+        codigoLink: "https://github.com/Alcantara-Diego/todolist"
     }
 
 ]
@@ -63,6 +70,14 @@ function atualizarInformacoes(atributo){
     let codigoDoProjetoSelecionado = document.getElementById("codigoDoProjetoSelecionado");
 
     switch(atributo){
+        case "todo": //React Todolist
+            imagemDoProjetoSelecionado.src="assets/todoG.JPG";
+            tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[3].titulo;
+            subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[3].subtitulo;
+            descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[3].descricao;
+            liveServerDoProjetoSelecionado.href=infoDosProjetos[3].liveServerLink;
+            codigoDoProjetoSelecionado.href=infoDosProjetos[3].codigoLink;
+            break;
         case "expense": //Expense Tracker
             imagemDoProjetoSelecionado.src="assets/tracker.JPG";
             tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[0].titulo;
@@ -99,9 +114,10 @@ function mostrarAbaSaberMais(){
     //o overlay é uma barreira que impede a interação com qualquer outra parte do site a não ser a aba que mostra as informações do projeto selecionado
     document.getElementById("overlay").style.display="block";
 }
-document.getElementById("projeto1saberMais").addEventListener("click", mostrarAbaSaberMais);
-document.getElementById("projeto2saberMais").addEventListener("click", mostrarAbaSaberMais);
-document.getElementById("projeto3saberMais").addEventListener("click", mostrarAbaSaberMais);
+document.getElementById("projetoExpenseSaberMais").addEventListener("click", mostrarAbaSaberMais);
+document.getElementById("projetoConversorSaberMais").addEventListener("click", mostrarAbaSaberMais);
+document.getElementById("projetoClimaSaberMais").addEventListener("click", mostrarAbaSaberMais);
+document.getElementById("projetoTodolistSaberMais").addEventListener("click", mostrarAbaSaberMais);
 
 // fechar a aba com as informações do projeto selecionado e remove o overlay
 document.getElementById("fecharAbaSaberMais").addEventListener("click", () =>{
@@ -116,18 +132,19 @@ function mostrarSectionProjetos(){
     $(".titulo").eq(0).css({"animation": "animarTitulo 2s"}).css("opacity", "1");
     $(".barra").eq(0).css({"animation": "animarBarra 2s"}).css("opacity", "1");
     setTimeout(()=>{
-        $("#projeto1").css({"animation": `revelar 2s ease`}).css("opacity", "1");
+        $(".projetosDica").eq(0).css({"animation": "revelar 2s"}).css("opacity", "1");
+        $("#projetoTodolist").css({"animation": `revelar 2s ease`}).css("opacity", "1");
 
             setTimeout(()=>{
-                $("#projeto2").css({"animation": `revelar 2s ease`}).css("opacity", "1");
+                $("#projetoExpense").css({"animation": `revelar 2s ease`}).css("opacity", "1");
             }, 200);
 
             setTimeout(()=>{
-                $("#projeto3").css({"animation": `revelar 2s ease`}).css("opacity", "1");
+                $("#projetoConversor").css({"animation": `revelar 2s ease`}).css("opacity", "1");
             }, 400);
 
             setTimeout(()=>{
-                $("#projeto4").css({"animation": `revelar 2s ease`}).css("opacity", "1");
+                $("#projetoClima").css({"animation": `revelar 2s ease`}).css("opacity", "1");
                 ativarHoverNosProjetos();
             }, 600)
     }, 1000)

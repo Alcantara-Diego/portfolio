@@ -325,6 +325,12 @@ main .barra{
     }
 }
 
+main .projetosDica{
+    text-align: center;
+    color: gray;
+    opacity: 0;
+}
+
 #divProjetos{
     display: flex;
     flex-direction: row;
@@ -463,9 +469,12 @@ main .barra{
     background-image: url(assets/tracker.JPG);
 }
 .projeto:nth-child(2){
-    background-image: url(assets/conversor.JPG);
+    background-image: url(assets/todoP.JPG);
 }
 .projeto:nth-child(3){
+    background-image: url(assets/conversor.JPG);
+}
+.projeto:nth-child(4){
     background-image: url(assets/clima.JPG);
 }
 @keyframes revelar{
