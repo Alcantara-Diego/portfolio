@@ -54,10 +54,17 @@ const infoDosProjetos = [
     {
         titulo: "React Todo List",
         subtitulo: "Organize sua agenda!",
-        descricao: "Não se esqueça das sua obrigações do dia. Crie tarefas, de destaque as mais importantes e aproveite o tema claro e noturno. Aplicativo feito com React.js",
+        descricao: "Não se esqueça das sua obrigações do dia. Crie tarefas, de destaque as mais importantes, aproveite o tema claro e noturno e mude o idioma se preferir. Aplicativo feito com React.js",
         liveServerLink: "https://alcantara-diego.github.io/todolist/",
         codigoLink: "https://github.com/Alcantara-Diego/todolist"
-    }
+    },
+    {
+        titulo: "React loginPage",
+        subtitulo: "Página de login",
+        descricao: "Front-End de uma página de login e cadastro de usuário, usado react-router-dom para navegar entre as sessões(Sem Back-End envolvido)",
+        liveServerLink: "https://alcantara-diego.github.io/myloginpage/",
+        codigoLink: "https://github.com/Alcantara-Diego/myloginpage"
+    },
 
 ]
 //Altera as informações da aba saberMais dependendo do projeto selecionado pelo usuário
@@ -102,6 +109,14 @@ function atualizarInformacoes(atributo){
             liveServerDoProjetoSelecionado.href=infoDosProjetos[2].liveServerLink;
             codigoDoProjetoSelecionado.href=infoDosProjetos[2].codigoLink;
             break;
+        case "myloginpage":
+            imagemDoProjetoSelecionado.src="assets/myloginpageG.JPG";
+            tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[4].titulo;
+            subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[4].subtitulo;
+            descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[4].descricao;
+            liveServerDoProjetoSelecionado.href=infoDosProjetos[4].liveServerLink;
+            codigoDoProjetoSelecionado.href=infoDosProjetos[4].codigoLink;
+            break
 
     }
 }
@@ -118,6 +133,7 @@ document.getElementById("projetoExpenseSaberMais").addEventListener("click", mos
 document.getElementById("projetoConversorSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoClimaSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoTodolistSaberMais").addEventListener("click", mostrarAbaSaberMais);
+document.getElementById("projetoMyloginpageSaberMais").addEventListener("click", mostrarAbaSaberMais);
 
 // fechar a aba com as informações do projeto selecionado e remove o overlay
 document.getElementById("fecharAbaSaberMais").addEventListener("click", () =>{
@@ -146,7 +162,11 @@ function mostrarSectionProjetos(){
             setTimeout(()=>{
                 $("#projetoClima").css({"animation": `revelar 2s ease`}).css("opacity", "1");
                 ativarHoverNosProjetos();
-            }, 600)
+            }, 600);
+
+            setTimeout(()=>{
+                $("#projetoMyloginpage").css({"animation": `revelar 2s ease`}).css("opacity", "1");
+            }, 800);
     }, 1000)
 }
 function mostrarSectionContato(){
