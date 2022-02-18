@@ -268,8 +268,82 @@ nav input[type="radio"]:hover + label{
 
 
 /* --------------------------------- */
+#divSobre{
+    padding: 4em 3em;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
 
+}
+#divSobre h1{
+    margin-top: 0;
+}
+#divSobre .barra{
+    background-color: #444649;
+}
+#divSobre .barra, #divSobre .titulo{
+    opacity: 1;
+}
+.sobreCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 30px auto;
+    width: 70%;
+    padding: 1em;
+    color: white;
+    background-color: purple;
+    border-radius: 10px;
+    box-shadow: 0px 1px 1px 0px black;
+}
+.sobreCard:nth-child(even){
+    flex-direction: row-reverse;
+    background-color: #2B435F;
+}
+.sobreCard:nth-child(5){
+    background-color: #ff0037;
+    padding: 1.5em;
+}
+.sobreCard .miniCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;  
+}
+.miniCard:nth-child(2){
+    border: 3px solid white;
+    border-top: none;
+    border-bottom: none;
+}
+.containerDoIcone{
+    font-size: 3em;
+    text-align: center;
+    padding: 0.1em 0.4em;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    color: #ff0037;
+    background-color: #ffffff;
+}
 
+.sobreCard .descricao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sobreCard p{
+    text-align: center;
+    width: 90%;
+    font-size: 1.3em;
+}
+.sobreCard img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+/* --------------------------------- */
 main{
     position: relative;
     height: fit-content;
@@ -765,6 +839,12 @@ footer > p{
 
 
 @media only screen and (max-width: 1140px){
+    .sobreCard{
+        width: 80%;
+    }
+
+
+
     #saberMaisProjetos{
         width: 80vw;
     }
@@ -772,6 +852,7 @@ footer > p{
         width: 40vw;
     }
 }
+
 @media only screen and (max-width: 900px) {
     #card h1{
         font-size: 2.6em;
@@ -809,6 +890,16 @@ footer > p{
     .info2 a{
         font-size: 1.1em;
         width: 200px;
+    }
+
+
+
+    .sobreCard{
+        width: 90%;
+    }
+    .sobreCard img{
+        width: 200px;
+        height: 200px;
     }
 
 
@@ -863,6 +954,43 @@ footer > p{
         font-size: 1em;
         width: 160px;
     }
+
+
+
+    .sobreCard{
+        width: 100%;
+        padding-top: 0;
+    }
+    .sobreCard:nth-child(3){
+        flex-direction: column-reverse;
+    }
+    .sobreCard:nth-child(3) img{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .sobreCard:nth-child(3) p{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sobreCard:nth-child(5){
+        flex-direction: column;
+        padding-top: 0;
+    }
+    .sobreCard:nth-child(5) p{
+        margin-bottom: 20px;
+    }
+    .miniCard:nth-child(2){
+        border: 3px solid white;
+        border-left: none;
+        border-right: none;
+    }
+    .containerDoIcone{
+        margin-top: 20px;
+    }
+
+
+
 
     #divContato p:first-of-type{
         font-size: 1em;
@@ -954,6 +1082,30 @@ footer > p{
         width: 100%;
         height: 100%;
     }
+
+    /*------------------- 
+         Aba sobre estilo
+    -------------------- */
+
+    .sobreCard{
+        width: 100%;
+        padding-top: 0;
+    }
+    .sobreCard:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .sobreCard img{
+        width: 100%!important;
+        border-radius: 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+
+
+
+
+
     /*------------------- 
          SaberMaisProjetos estilo
     -------------------- */
@@ -996,6 +1148,10 @@ footer > p{
         width: 100%;
         font-size: 1em;
         margin-top: 0px;
+    }
+
+    #divSobre{
+        padding: 4em 1.5em;
     }
 }
 

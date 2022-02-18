@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- FONT AWESOME PRINCIPAL -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <!-- FONT AWESOME BRAND TAGS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" integrity="sha512-bSncow0ApIhONbz+pNI52n0trz5fMWbgteHsonaPk42JbunIeM9ee+zTYAUP1eLPky5wP0XZ7MSLAPxKkwnlzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- FAVCON -->
     <link rel="shortcut icon" href="assets/Gabriel-Leblanc-Historic-Mac-Mac.ico" type="image/x-icon">
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+
     <title>Diego Alcântara Portfolio</title>
 </head>
 <body>
@@ -20,6 +31,10 @@
                 <li>
                     <input type="radio" name="navOpc" id="home" checked>
                     <label for="home">Home</label>
+                </li>
+                <li>
+                    <input type="radio" name="navOpc" id="sobre">
+                    <label for="sobre">Sobre</label>
                 </li>
                 <li>
                     <input type="radio" name="navOpc" id="projetos">
@@ -70,6 +85,50 @@
 
         
     </header>
+    <section id="divSobre">
+        <h1 class="titulo">Sobre</h1>
+        <div class="barra"></div>
+        <div class="sobreCard">
+            <div class="descricao">
+                <h2>Sobre mim</h2>
+                <p>Programador Front-End em busca de colocação no mercado. Adoro desenvolvimento web e venho adquirindo experiência trabalhando nos meus projetos e os hospendando no github
+                </p>
+            </div>
+            <img src="assets/speedTest.png" alt="" class="ilustracao">
+        </div>
+
+        <div class="sobreCard">
+            <div class="descricao">
+                <h2>Minhas Tecnologias</h2>
+                <p>HTML<i class="fa-brands fa-html5"></i>, CSS<i class="fa-brands fa-css3-alt"></i>, Javascript<i class="fa-brands fa-js"></i>, React<i class="fa-brands fa-react"></i>, Bootstrap<i class="fa-brands fa-bootstrap"></i>, Jquery, SCSS<i class="fa-brands fa-sass"></i>
+                </p>
+            </div>
+            <img src="assets/coding.png" alt="" class="ilustracao">
+        </div>
+        <div class="sobreCard">
+            <div class="miniCard">
+                <div class="containerDoIcone">
+                    <i class="fa fa-eye"></i>
+                </div>
+                <p>Cuidado nos mínimos detalhes para escrever o melhor código possível </p>
+            </div>
+            
+            <div class="miniCard">
+                <div class="containerDoIcone">
+                    <i class="fa fa-laptop-code"></i>
+                </div>
+                <p>Layouts responsivos pensados para desktop e mobile.</p>
+            </div>
+
+            <div class="miniCard">
+                <div class="containerDoIcone">
+                    <i class="fa fa-graduation-cap"></i>
+                </div>
+                <p>Sempre adquirindo novos conhecimentos e aperfeiçoando os projetos</p>
+            </div>
+
+        </div>
+    </section>
     <main>
         <div id="saberMaisProjetos">
             <img src="assets/clima.JPG" alt="" id="imagemDoProjetoSelecionado">
@@ -165,6 +224,7 @@
             
         </div>
     </main>
+
     <section id="divContato">
         <svg viewBox="0 0 1536 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#F5F5F5" d="M 0 50 L 779 110 L 779 0 L 0 0 Z" stroke-width="0"></path> <path fill="#F5F5F5" d="M 778 110 L 1536 50 L 1536 0 L 778 0 Z" stroke-width="0"></path> </svg>
         <h1 class="titulo" id="contatoTitulo">contato</h1>
@@ -184,6 +244,7 @@
         </form>
 
     </section>
+
     <footer>
         <a href="https://github.com/Alcantara-Diego" target="_blank">Acessar minha conta no Github <i class="fab fa-github"></i></a>
         <p>Diego Alcântara©2021</p>

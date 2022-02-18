@@ -145,8 +145,8 @@ document.getElementById("fecharAbaSaberMais").addEventListener("click", () =>{
 
 // animar sessões
 function mostrarSectionProjetos(){
-    $(".titulo").eq(0).css({"animation": "animarTitulo 2s"}).css("opacity", "1");
-    $(".barra").eq(0).css({"animation": "animarBarra 2s"}).css("opacity", "1");
+    $(".titulo").eq(1).css({"animation": "animarTitulo 2s"}).css("opacity", "1");
+    $(".barra").eq(1).css({"animation": "animarBarra 2s"}).css("opacity", "1");
     setTimeout(()=>{
         $(".projetosDica").eq(0).css({"animation": "revelar 2s"}).css("opacity", "1");
         $("#projetoTodolist").css({"animation": `revelar 2s ease`}).css("opacity", "1");
@@ -171,9 +171,9 @@ function mostrarSectionProjetos(){
 }
 function mostrarSectionContato(){
     $("#contatoTitulo").css({"animation": "animarTitulo 2s"}).css("opacity", "1");
-    $(".barra").eq(1).css({"animation": "animarBarra 2s"}).css("opacity", "1");
+    $(".barra").eq(2).css({"animation": "animarBarra 2s"}).css("opacity", "1");
     setTimeout(()=>{
-        $(".barra").eq(1).next().css({"animation": "revelar 2s"}).css("opacity", "1");
+        $(".barra").eq(2).next().css({"animation": "revelar 2s"}).css("opacity", "1");
         $("form").css({"animation": "revelar 2s"}).css("opacity", "1");
     },1000)
 }
