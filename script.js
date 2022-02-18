@@ -187,6 +187,7 @@ const options = {
     rootMargin: "-200px 0px 0px 0px"
 };
 let itensObservados = document.querySelectorAll(".observado");
+let sobreObservado=false;
 let projetosObservado=false;
 let contatoObservado=false;
 const observandoSections = new IntersectionObserver(function(entries, observer){
@@ -201,6 +202,10 @@ const observandoSections = new IntersectionObserver(function(entries, observer){
         switch(sectionVisivel){
             case "Home":
                 $("#home")[0].checked=true;
+                break;
+
+            case "Sobre":
+                $("#sobre")[0].checked=true;
                 break;
 
             case "Projetos":
@@ -254,6 +259,16 @@ document.querySelector("label[for='home']").addEventListener("click", ()=>{
     $("html,body").animate({
         scrollTop: $("header").offset().top}, 1000
     );
+});
+
+
+//auto-scroll para sobre
+document.querySelector("label[for='sobre']").addEventListener("click", ()=>{
+    navBarLinks.classList.remove("active");
+    $("html,body").animate({
+        scrollTop: $("#divSobre").offset().top}, 1000
+    );
+    $("#sobre")[0].checked=true;
 });
 
 //auto-scroll para projetos
