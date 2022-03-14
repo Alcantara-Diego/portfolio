@@ -65,6 +65,13 @@ const infoDosProjetos = [
         liveServerLink: "https://alcantara-diego.github.io/myloginpage/",
         codigoLink: "https://github.com/Alcantara-Diego/myloginpage"
     },
+    {
+        titulo: "FlameStore🔥",
+        subtitulo: "Loja online",
+        descricao: "Front-End de uma loja de games digital, usado react-router-dom para navegar entre as sessões(Ainda em desenvolvimento)",
+        liveServerLink: "https://alcantara-diego.github.io/gamestore/",
+        codigoLink: "https://github.com/Alcantara-Diego/gamestore"
+    }
 
 ]
 //Altera as informações da aba saberMais dependendo do projeto selecionado pelo usuário
@@ -84,6 +91,14 @@ function atualizarInformacoes(atributo){
             descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[3].descricao;
             liveServerDoProjetoSelecionado.href=infoDosProjetos[3].liveServerLink;
             codigoDoProjetoSelecionado.href=infoDosProjetos[3].codigoLink;
+            break;
+        case "gamestore": //Gamestore
+            imagemDoProjetoSelecionado.src="assets/gamestoreG.JPG";
+            tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[5].titulo;
+            subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[5].subtitulo;
+            descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[5].descricao;
+            liveServerDoProjetoSelecionado.href=infoDosProjetos[5].liveServerLink;
+            codigoDoProjetoSelecionado.href=infoDosProjetos[5].codigoLink;
             break;
         case "expense": //Expense Tracker
             imagemDoProjetoSelecionado.src="assets/tracker.JPG";
@@ -130,6 +145,7 @@ function mostrarAbaSaberMais(){
     document.getElementById("overlay").style.display="block";
 }
 document.getElementById("projetoExpenseSaberMais").addEventListener("click", mostrarAbaSaberMais);
+document.getElementById("projetoGamestoreSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoConversorSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoClimaSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoTodolistSaberMais").addEventListener("click", mostrarAbaSaberMais);
@@ -156,17 +172,21 @@ function mostrarSectionProjetos(){
             }, 200);
 
             setTimeout(()=>{
+                $("#projetoGamestore").css({"animation": `revelar 2s ease`}).css("opacity", "1");
+            }, 200);
+
+            setTimeout(()=>{
                 $("#projetoConversor").css({"animation": `revelar 2s ease`}).css("opacity", "1");
-            }, 400);
+            }, 200);
 
             setTimeout(()=>{
                 $("#projetoClima").css({"animation": `revelar 2s ease`}).css("opacity", "1");
                 ativarHoverNosProjetos();
-            }, 600);
+            }, 200);
 
             setTimeout(()=>{
                 $("#projetoMyloginpage").css({"animation": `revelar 2s ease`}).css("opacity", "1");
-            }, 800);
+            }, 200);
     }, 1000)
 }
 function mostrarSectionContato(){
@@ -187,7 +207,6 @@ const options = {
     rootMargin: "-200px 0px 0px 0px"
 };
 let itensObservados = document.querySelectorAll(".observado");
-let sobreObservado=false;
 let projetosObservado=false;
 let contatoObservado=false;
 const observandoSections = new IntersectionObserver(function(entries, observer){
