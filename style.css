@@ -153,6 +153,7 @@ nav input[type="radio"]:hover + label{
 #card p{
     color: rgb(221, 220, 220);
     font-size: 1.2em;
+    text-align: center;
 }
 #card p:nth-child(2){
     color:var(--corTerciaria);
@@ -671,9 +672,46 @@ main .projetosDica{
 #divContato .barra{
     background: white;
 }
-#divContato > p:first-of-type{
+
+.meusContatosLista{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    gap: 15px;
+    margin-top: 45px;
+    opacity: 0;
+}
+
+.meusContatosLista li{
+    text-align: center;
+}
+.meusContatosLista a{
+    margin-bottom: 3px;
+    font-size: 1.2em;
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+    transition: 500ms;
+}
+
+.meusContatosLista .linkedinLink:hover{
+    color: #5795f3;
+}
+.meusContatosLista .githubLink:hover{
+    color: orange;
+}
+.meusContatosLista p{
+    text-align: center;
+    color: white;
+}
+
+#divContato #formularioDescricao{
     font-size: 1.1em;
-    margin: 30px 0px;
+    margin-top: 30px;
+    margin-bottom: 15px;
     text-align: center;
     color: var(--corQuaternaria);
     opacity: 0;
@@ -724,26 +762,13 @@ form{
 /* ------------------------------- */
 footer{
     width: 100%;
-    height: 25vh;
+    height: fit-content;
     padding: 20px;
     background-color: #0b0f22;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
-footer a{
-    width: fit-content;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 30px;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    transition: 500ms;
-}
-footer a:hover{
-    text-decoration: underline;
 }
 footer > p{
     text-align: center;
@@ -819,7 +844,7 @@ footer > p{
     .barra{
         margin-bottom: 10px;
     }
-    #divContato p:first-of-type{
+    #divContato #formularioDescricao{
         font-size: 1.2em;
         margin-bottom: 50px;
     }
@@ -833,15 +858,12 @@ footer > p{
         font-size: 1.2em;
         width: 25%;
     }
-    footer a{
-        font-size: 1.5em;
-    }
     footer p{
         font-size: 1.2em;
     }
 }
 
-
+/* Versão desktop */
 @media only screen and (max-width: 1140px){
     .sobreCard{
         width: 80%;
@@ -996,7 +1018,7 @@ footer > p{
 
 
 
-    #divContato p:first-of-type{
+    #divContato #formularioDescricao{
         font-size: 1em;
     }
     form{
@@ -1130,6 +1152,9 @@ footer > p{
      /*------------------- 
          Contato estilo
     -------------------- */
+    .meusContatosLista{
+        flex-direction: column;
+    }
     form{
         width: 90vw;
     }

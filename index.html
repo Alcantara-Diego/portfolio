@@ -239,27 +239,45 @@
     </main>
 
     <section id="divContato">
+        <!-- Linha de decoração no topo da div -->
         <svg viewBox="0 0 1536 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#F5F5F5" d="M 0 50 L 779 110 L 779 0 L 0 0 Z" stroke-width="0"></path> <path fill="#F5F5F5" d="M 778 110 L 1536 50 L 1536 0 L 778 0 Z" stroke-width="0"></path> </svg>
+
+
         <h1 class="titulo" id="contatoTitulo">contato</h1>
         <div class="barra"></div>
-        <p class="observado" data-section="Contato">Alguma dúvida ou oportunidade de trabalho? <br> Envie-me uma mensagem e responderei assim que possível!</p>
 
+        <ul class="meusContatosLista">
+            <li>
+                <a href="https://www.linkedin.com/in/diego-alc%C3%A2ntara-790424235/" target="_blank" class="linkedinLink">Linkedin <i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+                <p><i class="fa fa-envelope"></i> ddag0309@gmail.com <i class="fa fa-envelope"></i></p>
+            </li>
+            <li>
+                <a href="https://github.com/Alcantara-Diego" target="_blank" class="githubLink">Github <i class="fab fa-github"></i></a>
+            </li>
+        </ul>
 
-        <form action="https://gmail.us20.list-manage.com/subscribe/post?u=a6841b0f47fb26e0fcb791206&amp;id=6100882089" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <input type="text" id="nomeInput" name="FNAME" placeholder="nome">
-            <input type="email" name="EMAIL" placeholder="email">
-            <textarea name="MMERGE2" id="" cols="30" rows="10" placeholder="mensagem"></textarea>
+        <div class="formularioDiv">
+            <p id="formularioDescricao" class="observado" data-section="Contato">Algum feedback ou oportunidade de trabalho? <br> Entre em contato e responderei assim que possível!
+            <br>(As mensagens são enviadas ao meu email citado acima)</p>
+             <!-- Make sure you don't change the form action-->
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <!-- Replace with accesKey sent to your email -->
+                <input type="hidden" name="accessKey" value="95d38821-fa8a-41a5-b3d6-ee007d92faf4"> <!-- Required -->
+                <input type="text" name="name" placeholder="Nome"> <!-- Optional -->
+                <input type="email" name="email" placeholder="Melhor email"> <!-- Optional -->
+                <textarea name="message" placeholder="Mensagem"></textarea> <!-- Optional -->
             
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a6841b0f47fb26e0fcb791206_6100882089" tabindex="-1" value=""></div>
-
-            <input type="submit" value="Enviar">
-        </form>
+                <!-- If you want form to redirect to a specific url after submission -->
+                <input type="hidden" name="redirectTo" value="https://alcantara-diego.github.io/portfolio/">
+                <input type="submit" value="Enviar" />
+            </form>
+        </div>
 
     </section>
 
     <footer>
-        <a href="https://github.com/Alcantara-Diego" target="_blank">Acessar minha conta no Github <i class="fab fa-github"></i></a>
         <p>Diego Alcântara©2021</p>
     </footer>
 

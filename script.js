@@ -193,7 +193,8 @@ function mostrarSectionContato(){
     $("#contatoTitulo").css({"animation": "animarTitulo 2s"}).css("opacity", "1");
     $(".barra").eq(2).css({"animation": "animarBarra 2s"}).css("opacity", "1");
     setTimeout(()=>{
-        $(".barra").eq(2).next().css({"animation": "revelar 2s"}).css("opacity", "1");
+        $(".meusContatosLista").css({"animation": "revelar 2s"}).css("opacity", "1");
+        $("#formularioDescricao").css({"animation": "revelar 2s"}).css("opacity", "1");
         $("form").css({"animation": "revelar 2s"}).css("opacity", "1");
     },1000)
 }
