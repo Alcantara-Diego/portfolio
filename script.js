@@ -283,13 +283,15 @@ document.querySelector("label[for='home']").addEventListener("click", ()=>{
 
 
 //auto-scroll para sobre
-document.querySelector("label[for='sobre']").addEventListener("click", ()=>{
+function scrollSobre(){
     navBarLinks.classList.remove("active");
     $("html,body").animate({
         scrollTop: $("#divSobre").offset().top}, 1000
     );
     $("#sobre")[0].checked=true;
-});
+}
+document.querySelector("label[for='sobre']").addEventListener("click",scrollSobre)
+document.querySelector('#homeActionBtn').addEventListener("click", scrollSobre);
 
 //auto-scroll para projetos
 function scrollProjetos(){
@@ -299,8 +301,8 @@ function scrollProjetos(){
       );
     $("#projetos")[0].checked=true;
 };
-document.querySelector('#verProjetos').addEventListener("click", scrollProjetos);
 document.querySelector("label[for='projetos']").addEventListener("click", scrollProjetos);
+document.querySelector('#verProjetosBtn').addEventListener("click", scrollProjetos);
 
 //auto-scroll para contato
 document.querySelector("label[for='contato']").addEventListener("click", ()=>{
