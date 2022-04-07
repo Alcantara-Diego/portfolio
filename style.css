@@ -14,9 +14,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-/* body{
-    position: relative;
-} */
+
 nav{
     height: 12vh;
     border-bottom: none;
@@ -161,11 +159,6 @@ nav input[type="radio"]:hover + label{
     font-size: 1.3em;
     font-weight: bold;
 }
-#card p:nth-child(3){
-    color: white;
-    width: 70%;
-    margin: 0px 0px 40px 0px;
-}
 #card button{
     font-size: 1.2em;
     font-weight: bold;
@@ -270,19 +263,24 @@ nav input[type="radio"]:hover + label{
 
 /* --------------------------------- */
 #divSobre{
-    padding: 4em 3em;
+    padding: 4em 2em;
     height: fit-content;
-    background-color: rgb(238, 238, 238);
+    background-color: #222222;
 
 }
 #divSobre h1{
+    color: white;
     margin-top: 0;
 }
 #divSobre .barra{
-    background-color: #444649;
+    background-color: white;
 }
 #divSobre .barra, #divSobre .titulo{
     opacity: 1;
+}
+
+.abaSobreConteudo{
+    width: 85%;
 }
 .sobreCard{
     display: flex;
@@ -290,41 +288,81 @@ nav input[type="radio"]:hover + label{
     align-items: center;
     justify-content: space-evenly;
     margin: 30px auto;
-    width: 70%;
-    padding: 1em;
-    color: white;
-    background-color: purple;
+    font-size: 1.3em;
+    padding: 0;
+    color: #e4e4e4;
+    background: none;
     border-radius: 10px;
-    box-shadow: 0px 1px 1px 0px black;
 }
-.sobreCard.sobreMimCard p{
-    width: 100%;
+
+.sobreMimTitulo{
+    color: white;
 }
-.tecnologiasCard{
-    flex-direction: row-reverse;
-    padding: 1.5em;
-    background-color: #2B435F;
+.sobreCard strong{
+    color: var(--corTerciaria);
 }
-.tecnologiasCard p{
-    margin-bottom: 5px;
+
+
+
+
+
+.tecnologiasLista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 5px;
 }
+.tecnologiasLista .listaHeader{
+    width: calc(100% - 5px);
+    flex-direction: row;
+    justify-content: center;
+}
+.tecnologiasLista li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(50% - 5px);
+    padding: 10px;
+    margin-bottom: 6px;
+    color: white;
+    background-color: #3a3a3a;
+}
+.tecnologiasLista img{
+    width: 100px;
+}
+.tecnologiasLista h3{
+    margin-left: 10px;
+}
+
+
 .minicardsContainer{
     flex-direction: row;
-    background-color: #ff0037;
+    flex-wrap: wrap;
+    gap: 15px 0px;
+    margin-top: 40px;
 }
 .minicardsContainer .miniCard{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;  
+    justify-content: center;
+    text-align: center;
+    width: 295px;
+    height: 235px;
+    padding: 1em;
+    border-radius: 15px;
+    background-color: #3a3a3a;
 }
-.miniCard:nth-child(2){
-    border: 3px solid white;
-    border-top: none;
-    border-bottom: none;
+.miniCard p{
+    color: white;
+    font-size: .9em;
 }
+
 .containerDoIcone{
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     padding: 0.1em 0.4em;
     margin-bottom: 20px;
@@ -337,23 +375,16 @@ nav input[type="radio"]:hover + label{
 .sobreCard .descricao{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    text-align: center;
+    text-align: start;
 }
-.sobreCard p{
-    text-align: center;
-    width: 90%;
-    font-size: 1.3em;
-}
-.sobreCard img{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-}
+
+
 .btnAbaSobre{
     margin-top: .4rem;
     padding: 6px 10px;
+    font-size: 1em;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
@@ -361,6 +392,8 @@ nav input[type="radio"]:hover + label{
     transition: .400s;
 }
 #verProjetosBtn{
+    width: 100%;
+    margin: auto;
     color: white;
     border: 2px solid var(--corTerciaria);
     background-color: var(--corTerciaria);
@@ -370,12 +403,13 @@ nav input[type="radio"]:hover + label{
     border: 2px solid white!important;
 }
 .curriculoDownload{
-    color: black;
-   border: 2px solid orange;
-   background-color: orange;
+    font-size: .9em;
+    color: white;
+   border: 2px solid var(--corTerciaria);
+   background-color: var(--corTerciaria);
 }
 .curriculoDownload:hover{
-    border: 2px solid black!important;
+    border: 2px solid white!important;
 }
 
 /* --------------------------------- */
@@ -388,7 +422,7 @@ main{
 }
 .titulo{
     text-align: center;
-    font-size: 3.2em;
+    font-size: 2.3em;
     color: #444649;
     margin: 65px 0px 5px 0px;
     opacity: 0;
@@ -839,12 +873,6 @@ footer > p{
     #card p:nth-child(2){
         font-size: 1.5em;
     }
-    #card p:nth-child(3){
-        width: 80%;
-        font-size: 1.6em;
-        text-align: center;
-        margin: 0px 0px 40px 0px;
-    }
     #card button{
         font-size: 1.5em;
         padding: 10px 50px;
@@ -931,11 +959,6 @@ footer > p{
     #card p:nth-child(2){
         font-size: 1em;
     }
-    #card p:nth-child(3){
-        width: 70%;
-        font-size: 1em;
-        margin: 0px 0px 40px 0px;
-    }
     #card button{
         font-size: 1.2em;
         padding: 12px 50px;
@@ -985,11 +1008,6 @@ footer > p{
     }
     #card p:nth-child(2){
         font-size: 0.8em;
-    }
-    #card p:nth-child(3){
-        width: 70%;
-        font-size: 1em;
-        margin: 0px 0px 40px 0px;
     }
     #card button{
         font-size: 1em;
@@ -1044,17 +1062,6 @@ footer > p{
     .minicardsContainer{
         flex-direction: column;
     }
-    .miniCard:nth-child(2){
-        border: 3px solid white;
-        border-left: none;
-        border-right: none;
-        margin-top: 15px;
-        padding-bottom: 15px;
-    }
-    .containerDoIcone{
-        margin-top: 20px;
-    }
-
 
 
 
@@ -1108,12 +1115,6 @@ footer > p{
 
     #card p:nth-child(2){
         font-size: 1.2em;
-    }
-    #card p:nth-child(3){
-        width: 90%;
-        font-size: 1.4em;
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
     #conteudo{
         width: 100%;
@@ -1209,23 +1210,24 @@ footer > p{
     #card p:nth-child(2){
         font-size: 1em;
     }
-    #card p:nth-child(3){
-        width: 100%;
-        font-size: 1em;
-        margin-top: 0px;
-    }
 
     #divSobre{
         padding: 4em 1.5em;
     }
+
+    .minicardsContainer .miniCard {
+        width: 100%;
+        height: 250px;
+    }
+    .tecnologiasLista {
+        width: 100%;
+    }
+
 }
 
 @media only screen and (max-height: 620px){
     #card h1{
         font-size: 2.5em;
-    }
-    #card p:nth-child(3){
-        font-size: 1em;
     }
 
     #backgroundMobile{
