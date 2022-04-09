@@ -311,10 +311,10 @@ nav input[type="radio"]:hover + label{
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
-    gap: 5px;
+    gap: 0 6px;
 }
 .tecnologiasLista .listaHeader{
-    width: calc(100% - 5px);
+    width: calc(100% - 6px);
     flex-direction: row;
     justify-content: center;
 }
@@ -324,9 +324,10 @@ nav input[type="radio"]:hover + label{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    width: calc(50% - 5px);
+    width: calc(50% - 6px);
     padding: 10px;
     margin-bottom: 6px;
+    border-radius: 6px;
     color: white;
     background-color: #3a3a3a;
 }
@@ -416,19 +417,18 @@ nav input[type="radio"]:hover + label{
 main{
     position: relative;
     height: fit-content;
-    background-color: #F5F5F5;
+    background-color: #292929;
     padding: 1em;
     overflow-x: visible;
 }
 .titulo{
     text-align: center;
     font-size: 2.3em;
-    color: #444649;
+    color: #ffffff;
     margin: 65px 0px 5px 0px;
     opacity: 0;
 }
 main > h1{
-    color: #444649;
     opacity: 0;
 }
 @keyframes animarTitulo{
@@ -445,7 +445,7 @@ main > h1{
     }
 }
 main .barra{
-    background: #444649;
+    background-color: white;
     opacity: 0;
 }
 .barra{
@@ -470,7 +470,7 @@ main .barra{
 
 main .projetosDica{
     text-align: center;
-    color: gray;
+    color: #dddddd;
     opacity: 0;
 }
 
@@ -761,6 +761,8 @@ main .projetosDica{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
     width: 100%;
     gap: 35px;
 }
@@ -1149,6 +1151,7 @@ footer > p{
         width: 100%;
         height: 100%;
     }
+    
 
     /*------------------- 
          Aba sobre estilo
@@ -1157,14 +1160,13 @@ footer > p{
     .sobreCard{
         width: 100%;
     }
-    .sobreCard img{
-        width: 100%!important;
-        border-radius: 0;
-        margin-bottom: 20px;
-        margin-top: 20px;
+    .tecnologiasLista img {
+        width: 75px;
     }
 
-
+    #formularioDescricao{
+            font-size: .9em;
+        }
 
 
 
