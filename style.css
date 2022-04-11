@@ -860,14 +860,30 @@ footer > p{
 
 /* Versão 4k */
 @media only screen and (min-width: 1700px){
+    html{
+        font-size: 22px;
+    }
+    /* ----- NAVBAR ----- */
     .nav-scrolled{
         height: 10vh;
     }
     .navbar-links{
         font-size: 1.5em;
     }
+
+    /* ----- TITULO DAS SECTIONS ----- */
+    .titulo{
+        font-size: 3.5em;
+    }
+    .barra{
+        margin-bottom: 40px;
+    }
+
+    /* ----- HERO SECTION ----- */
     #card h1{
+        width: max-content;
         font-size: 4.5em;
+
     }
     #card p{
         font-size: 1.5em;
@@ -876,19 +892,76 @@ footer > p{
         font-size: 1.5em;
     }
     #card button{
-        font-size: 1.5em;
+        font-size: 1.8em;
         padding: 10px 50px;
         border-radius: 50px;
     }
 
+    /* ----- SOBRE MIM ----- */
+    .sobreMimTitulo{
+        font-size: 2em;
+    }
+    /* Parágrafo sobre mim  */
+    .sobreMimTitulo + p{ 
+        font-size: 1.3em;
+    }
+    .curriculoDownload{
+        font-size: 1.3em;
+    }
 
+    /* ------ CARDS ----- */
+    .minicardsContainer .miniCard {
+        width: 415px;
+        height: fit-content;
+    }
+    .miniCard P{
+        font-size: 1em;
+    }
+
+    /* ----- TECNOLOGIAS LISTA ------ */
+    .tecnologiasLista {
+        font-size: 1.2em;
+    }
+    .tecnologiasLista img {
+        width: 200px;
+    }
+    #verProjetosBtn {
+       font-size: 1.5em;
+    }
+
+    /* ----- PROJETOS SECITON ------ */
+    main .projetosDica {
+        font-size: 1.4em;
+    }
+
+    .projeto {
+        width: 500px;
+        height: 735px;
+    }
+    .info1 > h2 {
+        font-size: 2.5em;
+    }
+    .info1 > p {
+        font-size: 1.3em;
+    }
+    .info2 a {
+        font-size: 1.9em;
+        width: max-content;
+        padding: 10px 20px;
+    }
+    
+    
+    
+    
+
+    /* ABA SABER MAIS SOBRE OS PROJETOS */
     #saberMaisProjetos{
         width: 50vw;
         
     }
     #saberMaisProjetos img{
         display: block;
-        width: 55%;
+        width: 100%;
         margin: auto auto 5% auto;
     }
     #saberMaisProjetos h1{
@@ -910,28 +983,39 @@ footer > p{
         margin-right: 2%;
     }
 
-    .titulo{
-        font-size: 4.3em;
-    }
-    .barra{
-        margin-bottom: 10px;
-    }
+
+    
+    /* ----- DIV CONTATO ----- */
+    .meusContatosLista p {
+        font-size: 1.5em;
+    } 
+
     #divContato #formularioDescricao{
-        font-size: 1.2em;
+        font-size: 1.5em;
         margin-bottom: 50px;
     }
+
     form{
         width: 35vw;
     }
     form input:not(:last-child), form textarea{
         font-size: 1.3em;
+        height: 100px;
+    }
+    form textarea{
+        height: 250px;
     }
     form input[type="submit"]{
-        font-size: 1.2em;
+        font-size: 1.5em;
         width: 25%;
+        height: fit-content;
+    }
+
+    footer{
+        padding: 55px;
     }
     footer p{
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 }
 
