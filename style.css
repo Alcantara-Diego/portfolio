@@ -302,8 +302,53 @@ nav input[type="radio"]:hover + label{
     color: var(--corTerciaria);
 }
 
+.educacaoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.educacaoContainer > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
 
+.educacaoContainer div img{
+    width: 300px;
+}
 
+.educacaoContainer div .educacaoDestaque{
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #3a3a3a;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.educacaoDestaque a{
+    color: white;
+}
+.educacaoDestaque .containerDoIcone{
+    width: fit-content;
+    font-size: 1.7rem;
+    margin: 0 17px 0 0;
+}
+
+.imgcircular{
+    width: 260px!important;
+    height: 260px;
+    border-radius: 50%;
+    border: 4px solid red;
+    margin-right: 40px;
+    background-color: white;
+}
 
 
 .tecnologiasLista{
@@ -1087,6 +1132,15 @@ footer span{
     }
 
 
+    .educacaoContainer{
+        margin: 60px auto;
+    }
+    .graduacaoDiv, .devWebDiv{
+        flex-direction: column!important;
+        justify-content: center!important;
+    }
+
+
     form{
         width: 50vw;
     }
@@ -1256,8 +1310,29 @@ footer span{
     }
 
     #formularioDescricao{
-            font-size: .9em;
-        }
+        font-size: .9em;
+    }
+
+
+    .imgcircular{
+        width: 200px!important;
+        height: 200px;
+        margin: 30px auto;
+    }
+    div.educacaoDestaque{
+        flex-direction: column!important;
+        text-align: center;
+    }
+
+    div.educacaoDestaque p{
+        margin-top: 15px!important;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .educacaoDestaque .containerDoIcone{
+        margin-right: 0;
+    }
 
 
 

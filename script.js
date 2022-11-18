@@ -161,8 +161,8 @@ document.getElementById("fecharAbaSaberMais").addEventListener("click", () =>{
 
 // animar sessões
 function mostrarSectionProjetos(){
-    $(".titulo").eq(2).css({"animation": "animarTitulo 2s"}).css("opacity", "1");
-    $(".barra").eq(2).css({"animation": "animarBarra 2s"}).css("opacity", "1");
+    $(".titulo").eq(3).css({"animation": "animarTitulo 2s"}).css("opacity", "1");
+    $(".barra").eq(3).css({"animation": "animarBarra 2s"}).css("opacity", "1");
     setTimeout(()=>{
         $(".projetosDica").eq(0).css({"animation": "revelar 2s"}).css("opacity", "1");
         $("#projetoTodolist").css({"animation": `revelar 2s ease`}).css("opacity", "1");
@@ -191,7 +191,7 @@ function mostrarSectionProjetos(){
 }
 function mostrarSectionContato(){
     $("#contatoTitulo").css({"animation": "animarTitulo 2s"}).css("opacity", "1");
-    $(".barra").eq(3).css({"animation": "animarBarra 2s"}).css("opacity", "1");
+    $(".barra").eq(4).css({"animation": "animarBarra 2s"}).css("opacity", "1");
     setTimeout(()=>{
         $(".meusContatosLista").css({"animation": "revelar 2s"}).css("opacity", "1");
         $("#formularioDescricao").css({"animation": "revelar 2s"}).css("opacity", "1");
