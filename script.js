@@ -71,6 +71,13 @@ const infoDosProjetos = [
         descricao: "Front-End de uma loja de games digital, usado react-router-dom para navegar entre as sessões(Ainda em desenvolvimento)",
         liveServerLink: "https://alcantara-diego.github.io/gamestore/",
         codigoLink: "https://github.com/Alcantara-Diego/gamestore"
+    },
+    {
+        titulo: "Wolf Fit",
+        subtitulo: "E-commerce fitness",
+        descricao: "Site apresentado como projeto de empreendedorismo da graduação em análise e desenvolvimento de sistemas. Trabalho realizado por 6 participantes, tendo nota final 10. Realizei o protótipo do site no figma, e os códigos HTML, CSS e JS.",
+        liveServerLink: "http://wolffit.ml",
+        codigoLink: "https://github.com/ViniciusF-Pereira/ProjetoEmprendedorismo"
     }
 
 ]
@@ -85,7 +92,7 @@ function atualizarInformacoes(atributo){
 
     switch(atributo){
         case "todo": //React Todolist
-            imagemDoProjetoSelecionado.src="assets/todoG.JPG";
+            imagemDoProjetoSelecionado.src="assets/projetosImg/todoG.JPG";
             tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[3].titulo;
             subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[3].subtitulo;
             descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[3].descricao;
@@ -93,7 +100,7 @@ function atualizarInformacoes(atributo){
             codigoDoProjetoSelecionado.href=infoDosProjetos[3].codigoLink;
             break;
         case "gamestore": //Gamestore
-            imagemDoProjetoSelecionado.src="assets/gamestoreG.JPG";
+            imagemDoProjetoSelecionado.src="assets/projetosImg/gamestoreG.JPG";
             tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[5].titulo;
             subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[5].subtitulo;
             descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[5].descricao;
@@ -101,7 +108,7 @@ function atualizarInformacoes(atributo){
             codigoDoProjetoSelecionado.href=infoDosProjetos[5].codigoLink;
             break;
         case "expense": //Expense Tracker
-            imagemDoProjetoSelecionado.src="assets/tracker.JPG";
+            imagemDoProjetoSelecionado.src="assets/projetosImg/tracker.JPG";
             tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[0].titulo;
             subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[0].subtitulo;
             descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[0].descricao;
@@ -109,7 +116,7 @@ function atualizarInformacoes(atributo){
             codigoDoProjetoSelecionado.href=infoDosProjetos[0].codigoLink;
             break;
         case "conversor": //Conversor de moedas
-            imagemDoProjetoSelecionado.src="assets/conversor.JPG";
+            imagemDoProjetoSelecionado.src="assets/projetosImg/conversor.JPG";
             tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[1].titulo;
             subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[1].subtitulo;
             descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[1].descricao;
@@ -117,7 +124,7 @@ function atualizarInformacoes(atributo){
             codigoDoProjetoSelecionado.href=infoDosProjetos[1].codigoLink;
             break;
         case "clima": //Clima tempo
-            imagemDoProjetoSelecionado.src="assets/clima.JPG";
+            imagemDoProjetoSelecionado.src="assets/projetosImg/clima.JPG";
             tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[2].titulo;
             subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[2].subtitulo;
             descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[2].descricao;
@@ -125,12 +132,20 @@ function atualizarInformacoes(atributo){
             codigoDoProjetoSelecionado.href=infoDosProjetos[2].codigoLink;
             break;
         case "myloginpage":
-            imagemDoProjetoSelecionado.src="assets/myloginpageG.JPG";
+            imagemDoProjetoSelecionado.src="assets/projetosImg/myloginpageG.JPG";
             tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[4].titulo;
             subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[4].subtitulo;
             descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[4].descricao;
             liveServerDoProjetoSelecionado.href=infoDosProjetos[4].liveServerLink;
             codigoDoProjetoSelecionado.href=infoDosProjetos[4].codigoLink;
+            break
+        case "wolffit":
+            imagemDoProjetoSelecionado.src="assets/projetosImg/wolffitG.png";
+            tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[6].titulo;
+            subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[6].subtitulo;
+            descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[6].descricao;
+            liveServerDoProjetoSelecionado.href=infoDosProjetos[6].liveServerLink;
+            codigoDoProjetoSelecionado.href=infoDosProjetos[6].codigoLink;
             break
 
     }
@@ -150,6 +165,7 @@ document.getElementById("projetoConversorSaberMais").addEventListener("click", m
 document.getElementById("projetoClimaSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoTodolistSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoMyloginpageSaberMais").addEventListener("click", mostrarAbaSaberMais);
+document.getElementById("projetoWolffitSaberMais").addEventListener("click", mostrarAbaSaberMais);
 
 // fechar a aba com as informações do projeto selecionado e remove o overlay
 document.getElementById("fecharAbaSaberMais").addEventListener("click", () =>{

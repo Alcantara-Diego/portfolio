@@ -332,8 +332,12 @@ nav input[type="radio"]:hover + label{
     flex-direction: row;
     align-items: center;
 }
-.educacaoDestaque a{
+.educacaoDestaque .link{
+    background: none;
+    text-decoration: underline;
+    border: none;
     color: white;
+    cursor: pointer;
 }
 .educacaoDestaque .containerDoIcone{
     width: fit-content;
@@ -656,23 +660,23 @@ main .projetosDica{
     background-size: cover;
 }
 .projeto:nth-child(1){
-    background-image: url(assets/tracker.JPG);
+    background-image: url(assets/projetosImg/tracker.JPG);
 }
 .projeto:nth-child(2){
     background-position: top;
-    background-image: url(assets/gamestoreP.JPG);
+    background-image: url(assets/projetosImg/gamestoreP.JPG);
 }
 .projeto:nth-child(3){
-    background-image: url(assets/todoP.JPG);
+    background-image: url(assets/projetosImg/todoP.JPG);
 }
 .projeto:nth-child(4){
-    background-image: url(assets/conversor.JPG);
+    background-image: url(assets/projetosImg/conversor.JPG);
 }
 .projeto:nth-child(5){
-    background-image: url(assets/clima.JPG);
+    background-image: url(assets/projetosImg/clima.JPG);
 }
 .projeto:nth-child(6){
-    background-image: url(assets/myloginpageP.JPG);
+    background-image: url(assets/projetosImg/myloginpageP.JPG);
 }
 @keyframes revelar{
     0%{
