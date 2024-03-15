@@ -31,28 +31,28 @@ function ativarHoverNosProjetos(){
 //informações dos projetos destaque no portfolio
 const infoDosProjetos = [
     {
-        titulo: "Expense Tracker",
+        titulo: "Expense Tracker 💰",
         subtitulo: "Controle de finanças.",
         descricao: "Aplicativo de controle de finanças. Registre seus gastos e ganhos, crie metas para alcançar seus objetivos, adicione a aba 'inscrições' despezas recorrentes para não se esquecer delas, e personalize o app com cores diferentes ou com o modo noturno.",
         liveServerLink: "https://alcantara-diego.github.io/aplicativodegastos/",
         codigoLink: "https://github.com/Alcantara-Diego/aplicativodegastos"
     },
     {
-        titulo: "Conversor de moedas",
+        titulo: "Conversor de moedas💱",
         subtitulo: "Real dólar e euro.",
         descricao: "Saiba o valor do dólar e do euro hoje e converta a quantidade desejada para reais. informações extraídas por API.",
         liveServerLink: "https://alcantara-diego.github.io/conversordemoedas/",
         codigoLink: "https://github.com/Alcantara-Diego/conversordemoedas"
     },
     {
-        titulo: "Clima Tempo",
+        titulo: "Clima Tempo🌞",
         subtitulo: "Saiba a temperatura da sua cidade.",
         descricao: "Informações extraídas da OpenWeather API, pesquise a temperatura e condições do clima em milhares de cidades disponíveis.",
         liveServerLink: "https://alcantara-diego.github.io/climatempo/",
         codigoLink: "https://github.com/Alcantara-Diego/climatempo"
     },
     {
-        titulo: "React Todo List",
+        titulo: "React Todo List✅",
         subtitulo: "Organize sua agenda!",
         descricao: "Não se esqueça das sua obrigações do dia. Crie tarefas, de destaque as mais importantes, aproveite o tema claro e noturno e mude o idioma se preferir. Aplicativo feito com React.js",
         liveServerLink: "https://alcantara-diego.github.io/todolist/",
@@ -68,7 +68,7 @@ const infoDosProjetos = [
     {
         titulo: "FlameStore🔥",
         subtitulo: "Loja online",
-        descricao: "Front-End de uma loja de games digital, usado react-router-dom para navegar entre as sessões(Ainda em desenvolvimento)",
+        descricao: "Front-End de uma loja de games digital, usado react-router-dom para navegar entre as sessões.",
         liveServerLink: "https://alcantara-diego.github.io/gamestore/",
         codigoLink: "https://github.com/Alcantara-Diego/gamestore"
     },
@@ -78,6 +78,13 @@ const infoDosProjetos = [
         descricao: "Site apresentado como projeto de empreendedorismo da graduação em análise e desenvolvimento de sistemas. Trabalho realizado por 6 participantes, tendo nota final 10. Realizei o protótipo do site no figma, e os códigos HTML, CSS e JS.",
         liveServerLink: "http://wolffit.ml",
         codigoLink: "https://github.com/ViniciusF-Pereira/ProjetoEmprendedorismo"
+    },
+    {
+        titulo: "Twister🌪️",
+        subtitulo: "Rede social",
+        descricao: "Rede social de postagem de frases e textos curtos. Utilizado banco de dados firebase para guardar todas as interações feitas pelos usuários, e otimizado para ter o menor número de leituras possível no banco de dados.(Ainda em desenvolvimento)",
+        liveServerLink: "https://twister-social-app.web.app/",
+        codigoLink: "https://github.com/Alcantara-Diego/twister"
     }
 
 ]
@@ -131,7 +138,7 @@ function atualizarInformacoes(atributo){
             liveServerDoProjetoSelecionado.href=infoDosProjetos[2].liveServerLink;
             codigoDoProjetoSelecionado.href=infoDosProjetos[2].codigoLink;
             break;
-        case "myloginpage":
+        case "myloginpage": // My login page
             imagemDoProjetoSelecionado.src="assets/projetosImg/myloginpageG.JPG";
             tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[4].titulo;
             subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[4].subtitulo;
@@ -139,7 +146,7 @@ function atualizarInformacoes(atributo){
             liveServerDoProjetoSelecionado.href=infoDosProjetos[4].liveServerLink;
             codigoDoProjetoSelecionado.href=infoDosProjetos[4].codigoLink;
             break
-        case "wolffit":
+        case "wolffit": // Wolffit
             imagemDoProjetoSelecionado.src="assets/projetosImg/wolffitG.png";
             tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[6].titulo;
             subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[6].subtitulo;
@@ -147,7 +154,15 @@ function atualizarInformacoes(atributo){
             liveServerDoProjetoSelecionado.href=infoDosProjetos[6].liveServerLink;
             codigoDoProjetoSelecionado.href=infoDosProjetos[6].codigoLink;
             break
-
+        case "twister": // Twister
+            imagemDoProjetoSelecionado.src="assets/projetosImg/twisterG.png";
+            tituloDoProjetoSelecionado.innerHTML=infoDosProjetos[7].titulo;
+            subtituloDoProjetoSelecionado.innerHTML=infoDosProjetos[7].subtitulo;
+            descricaoDoProjetoSelecionado.innerHTML=infoDosProjetos[7].descricao;
+            liveServerDoProjetoSelecionado.href=infoDosProjetos[7].liveServerLink;
+            codigoDoProjetoSelecionado.href=infoDosProjetos[7].codigoLink;
+            break
+    
     }
 }
 function mostrarAbaSaberMais(){
@@ -159,12 +174,14 @@ function mostrarAbaSaberMais(){
     //o overlay é uma barreira que impede a interação com qualquer outra parte do site a não ser a aba que mostra as informações do projeto selecionado
     document.getElementById("overlay").style.display="block";
 }
+
 document.getElementById("projetoExpenseSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoGamestoreSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoConversorSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoClimaSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoTodolistSaberMais").addEventListener("click", mostrarAbaSaberMais);
-document.getElementById("projetoMyloginpageSaberMais").addEventListener("click", mostrarAbaSaberMais);
+// document.getElementById("projetoMyloginpageSaberMais").addEventListener("click", mostrarAbaSaberMais);
+document.getElementById("projetoTwisterSaberMais").addEventListener("click", mostrarAbaSaberMais);
 document.getElementById("projetoWolffitSaberMais").addEventListener("click", mostrarAbaSaberMais);
 
 // fechar a aba com as informações do projeto selecionado e remove o overlay
@@ -201,7 +218,7 @@ function mostrarSectionProjetos(){
             }, 200);
 
             setTimeout(()=>{
-                $("#projetoMyloginpage").css({"animation": `revelar 2s ease`}).css("opacity", "1");
+                $("#projetoTwister").css({"animation": `revelar 2s ease`}).css("opacity", "1");
             }, 200);
     }, 1000)
 }

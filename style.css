@@ -660,24 +660,27 @@ main .projetosDica{
     background-size: cover;
 }
 .projeto:nth-child(1){
-    background-image: url(assets/projetosImg/tracker.JPG);
+    background-image: url(assets/projetosImg/twisterP.png);
 }
 .projeto:nth-child(2){
-    background-position: top;
     background-image: url(assets/projetosImg/gamestoreP.JPG);
 }
 .projeto:nth-child(3){
-    background-image: url(assets/projetosImg/todoP.JPG);
+    background-position: top;
+    background-image: url(assets/projetosImg/tracker.JPG);
 }
 .projeto:nth-child(4){
-    background-image: url(assets/projetosImg/conversor.JPG);
+    background-image: url(assets/projetosImg/todoP.JPG);
 }
 .projeto:nth-child(5){
-    background-image: url(assets/projetosImg/clima.JPG);
+    background-image: url(assets/projetosImg/conversor.JPG);
 }
 .projeto:nth-child(6){
-    background-image: url(assets/projetosImg/myloginpageP.JPG);
+    background-image: url(assets/projetosImg/clima.JPG);
 }
+/* .projeto:nth-child(){
+    background-image: url(assets/projetosImg/myloginpageP.JPG);
+} */
 @keyframes revelar{
     0%{
         opacity: 0;
